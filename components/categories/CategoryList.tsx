@@ -1,10 +1,14 @@
+"use client";
+
 import {
-    Card, CardDescription,
-    CardHeader,
-    CardTitle
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle
 } from "@/components/ui/card";
 import { CategoryActions } from "./CategoryActions";
 import { Category } from "@/types";
+import { useEffect, useState } from "react";
 
 async function getCategories(): Promise<Category[]> {
   try {
@@ -24,8 +28,17 @@ async function getCategories(): Promise<Category[]> {
   }
 }
 
-export async function CategoryList() {
-  const categories = await getCategories();
+export function CategoryList() {
+  const [categories, setCategories] = useState<Category[]>([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await getCategories();
+      setCategories(data);
+    }
+
+    fetchData();
+  }, []);
 
   if (!categories.length) {
     return (
@@ -57,4 +70,4 @@ export async function CategoryList() {
       ))}
     </div>
   );
-} 
+}
