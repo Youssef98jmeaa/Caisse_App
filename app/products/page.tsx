@@ -13,8 +13,8 @@ export default function ProductsPage() {
       <div className="flex flex-col gap-4">
         <div className="flex justify-between items-center">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">Products</h1>
-            <p className="text-muted-foreground">
+            <h1 className="text-3xl font-bold tracking-tight mb-1.5">Products</h1>
+            <p className=" text-gray-800 mb-4 ">
               Manage your product inventory.
             </p>
           </div>

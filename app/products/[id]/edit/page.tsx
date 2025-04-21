@@ -40,13 +40,13 @@ export default async function EditProductPage({ params }: ProductPageProps) {
     <MainLayout>
       <div className="flex flex-col gap-4">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Edit Product</h1>
-          <p className="text-muted-foreground">
+          <h1 className="text-3xl font-bold tracking-tight ">Edit Product</h1>
+          <p className="text-black">
             Update the information for {product.name}.
           </p>
         </div>
         
-        <div className="rounded-lg border p-6 mt-4">
+        <div className="rounded-lg border p-6 mt-4 bg-white">
           <ProductForm initialData={product} />
         </div>
       </div>

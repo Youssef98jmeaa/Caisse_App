@@ -15,10 +15,11 @@ export default function OrdersPage() {
             View and manage all your orders.
           </p>
         </div>
-        
-        <Suspense fallback={<OrderListSkeleton />}>
-          <OrderList />
-        </Suspense>
+        <div className="flex flex-col py-3 border rounded-lg bg-background" >
+          <Suspense fallback={<OrderListSkeleton />}>
+            <OrderList />
+          </Suspense>
+        </div>
       </div>
     </MainLayout>
   );

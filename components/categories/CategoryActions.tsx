@@ -106,7 +106,7 @@ export function CategoryActions({ category }: CategoryActionsProps) {
 
   return (
     <>
-      <div className="flex space-x-2">
+      <div className="flex space-x-2 ">
         <Button
           variant="ghost"
           size="icon"
